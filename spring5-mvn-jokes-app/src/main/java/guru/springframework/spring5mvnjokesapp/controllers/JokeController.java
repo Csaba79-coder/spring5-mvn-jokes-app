@@ -21,7 +21,8 @@ public class JokeController {
 
     @RequestMapping({"/", ""})
     public String showJoke(Model model) {
-        model.addAttribute("joke", jokeService.getJoke());
+        model.addAttribute("joke", jokeService.getJoke()) ;
+        // model.addAttribute("joke", "HI HI"); // this writes only HIHI on website!
         return "index";
     }
 }
